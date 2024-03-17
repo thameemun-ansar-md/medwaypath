@@ -1,5 +1,0 @@
-com\medwaypath\core\util\PatientDalUtil.class
-com\medwaypath\core\manager\user\UserManager.class
-com\medwaypath\core\adapter\user\impl\UserAdapter.class
-com\medwaypath\core\adapter\user\UserAdapterFactory.class
-com\medwaypath\core\exchange\UserServiceExchange.class
