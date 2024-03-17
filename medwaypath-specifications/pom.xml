@@ -31,6 +31,12 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.7.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>medwaypath-dal</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -40,12 +46,28 @@
                 <version>6.2.1</version>
                 <executions>
                     <execution>
+                        <id>user-api</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <skipValidateSpec>true</skipValidateSpec>
-                            <inputSpec>${project.basedir}/src/main/resources/sample_open_api.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/user_api.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <configOptions>
+                                <openApiNullable>false</openApiNullable>
+                                <interfaceOnly>true</interfaceOnly>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>patients-api</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <skipValidateSpec>true</skipValidateSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/patients_api.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <configOptions>
                                 <openApiNullable>false</openApiNullable>
@@ -54,6 +76,20 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version> <!-- Replace {version} with the Maven compiler plugin version -->
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>1.5.3.Final</version> <!-- Replace {version} with the MapStruct version -->
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
         </plugins>
     </build>

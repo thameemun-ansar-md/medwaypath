@@ -1,0 +1,41 @@
+components:
+  schemas:
+    Patient:
+      type: object
+      properties:
+        id:
+          type: string
+          minLength: 12
+          description: The unique identifier for the patient
+        name:
+          type: string
+          description: The name of the patient
+        dob:
+          type: string
+          format: date-time
+          description: The date of birth of the patient
+        gender:
+          type: string
+          enum: [Male, Female, Other]
+          description: The gender of the patient
+        contact:
+          type: string
+          description: The contact information of the patient
+      required:
+        - name
+        - dob
+    MedwaypathException:
+      type: object
+      properties:
+        message:
+          type: string
+          description: A human-readable message describing the error.
+        code:
+          type: string
+          description: An error code indicating the type of error.
+        details:
+          type: object
+          description: Additional details about the error (optional).
+      required:
+        - message
+        - code

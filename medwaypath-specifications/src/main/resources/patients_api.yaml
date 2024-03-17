@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: Patient Management System API
+  version: 1.0.0
+  description: API for managing patients within a healthcare facility.
+servers:
+  - url: http://localhost:8080/api
+tags:
+  - Patients
+paths:
+  /patients:
+    get:
+      summary: Get all patients
+      operationId: getAllPatients
+      parameters:
+        - in: query
+          name: page
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: The page number to retrieve
+        - in: query
+          name: pageSize
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          description: The number of patients per page
+      responses:
+        '200':
+          description: A list of patients
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './schemas/patient.yaml#/components/schemas/Patient'
+        '404':
+          description: Patient not found
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/patient.yaml#/components/schemas/MedwaypathException'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/patient.yaml#/components/schemas/MedwaypathException'
+    post:
+      summary: Create a new patient
+      operationId: createPatient
+      parameters:
+        - in: query
+          name: mode
+          schema:
+            type: string
+            enum: ['Admin', 'User']
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './schemas/patient.yaml#/components/schemas/Patient'
+      responses:
+        '201':
+          description: The created patient
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/patient.yaml#/components/schemas/Patient'
+  /patients/{patientId}:
+    get:
+      summary: Get a patient by ID
+      operationId: getPatientById
+      parameters:
+        - in: path
+          name: patientId
+          required: true
+          schema:
+            type: string
+          description: The ID of the patient to retrieve
+      responses:
+        '200':
+          description: The patient data
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/patient.yaml#/components/schemas/Patient'
+        '404':
+          description: Patient not found
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/patient.yaml#/components/schemas/MedwaypathException'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/patient.yaml#/components/schemas/MedwaypathException'

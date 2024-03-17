@@ -1,5 +1,13 @@
-org\openapitools\model\AccountNotFoundError.class
-org\openapitools\model\DepositRequest.class
-org\openapitools\model\Account.class
+com\medwaypath\api\services\UserApiDelegateImpl.class
+com\medwaypath\api\util\PatientMapperBO.class
+org\openapitools\model\User.class
+com\medwaypath\api\util\PatientMapperBOImpl.class
+org\openapitools\model\Patient$GenderEnum.class
+org\openapitools\api\PatientsApi.class
+org\openapitools\model\Patient.class
 org\openapitools\api\ApiUtil.class
-org\openapitools\api\AccountApi.class
+com\medwaypath\api\services\PatientApiDelegateImpl.class
+org\openapitools\model\MedwaypathException.class
+com\medwaypath\api\MedwaypathApplication.class
+org\openapitools\api\UserApi.class
+org\openapitools\model\UserNotFoundError.class

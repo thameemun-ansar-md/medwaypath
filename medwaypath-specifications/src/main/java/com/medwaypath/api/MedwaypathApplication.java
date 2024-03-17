@@ -5,11 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {
-        "com.medwaypath.api"
-})
+@ComponentScan(basePackages = {"com.medwaypath.api", "com.medwaypath.dal"})
 public class MedwaypathApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(MedwaypathApplication.class);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(MedwaypathApplication.class);
+  }
 }
