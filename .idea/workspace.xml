@@ -23,9 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9edd5cdf-a487-4f62-bc9a-ab1ceeab316a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +55,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -72,7 +71,7 @@
       <recent name="C:\Users\Thameemun\Downloads\intake\medwaypath\medwaypath-specifications\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.Dockerfile (1)">
     <configuration name="MedwaypathApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.medwaypath.api.services.MedwaypathApplication" />
       <module name="medwaypath-specifications" />
@@ -106,8 +105,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dockerfile (1)" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile (1)" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.MedwaypathApplication" />
         <item itemvalue="Application.MedwaypathApplication" />
       </list>
@@ -134,8 +158,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="67" key="#Docker" timestamp="1710793714929">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="67" key="#Docker/0.0.1536.816@0.0.1536.816" timestamp="1710793714929" />
     <state x="249" y="0" key="#Project_Structure" timestamp="1710678475422">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -168,22 +197,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="548" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710577542214" />
-    <state width="1493" height="277" key="GridCell.Tab.0.bottom" timestamp="1710678636015">
+    <state width="882" height="277" key="GridCell.Tab.0.bottom" timestamp="1710793718301">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710678636015" />
-    <state width="1493" height="277" key="GridCell.Tab.0.center" timestamp="1710678636015">
+    <state width="882" height="277" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710793718301" />
+    <state width="882" height="277" key="GridCell.Tab.0.center" timestamp="1710793718301">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710678636015" />
-    <state width="1493" height="277" key="GridCell.Tab.0.left" timestamp="1710678636015">
+    <state width="882" height="277" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710793718301" />
+    <state width="882" height="277" key="GridCell.Tab.0.left" timestamp="1710793718300">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710678636015" />
-    <state width="1493" height="277" key="GridCell.Tab.0.right" timestamp="1710678636015">
+    <state width="882" height="277" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710793718300" />
+    <state width="882" height="277" key="GridCell.Tab.0.right" timestamp="1710793718301">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710678636015" />
+    <state width="882" height="277" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710793718301" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1710614698033">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -204,10 +233,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="299" y="63" key="Maven.ArtifactSearchDialog/0.0.1536.816@0.0.1536.816" timestamp="1710587772158" />
-    <state x="277" y="53" key="SettingsEditor" timestamp="1710661765952">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1710793520325">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1710661765952" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1710793520325" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1710589774198">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
