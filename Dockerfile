@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Build the application
-RUN mvn -B clean package
+RUN mvn -B clean install
 
 # Use a lightweight base image with JRE 8
 FROM openjdk:8-jre-slim
