@@ -2,13 +2,7 @@
 FROM maven:3.8.4-openjdk-8 AS build
 
 # Set the working directory in the container
-WORKDIR /
-
-# Copy the POM file to download dependencies
-COPY pom.xml .
-
-# Download dependencies (if any)
-RUN mvn -B dependency:go-offline
+WORKDIR /app
 
 # Copy the rest of the application
 COPY . .
