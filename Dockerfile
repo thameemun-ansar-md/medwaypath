@@ -17,7 +17,7 @@ FROM openjdk:8-jre-slim
 WORKDIR /app
 
 # Copy the compiled app from the build stage
-COPY --from=build /medwaypath-specifications/target/*.jar app.jar
+COPY --from=build /app/medwaypath-specifications/target/*.jar app.jar
 
 # Expose the port your app runs on
 EXPOSE 8080
