@@ -2,7 +2,7 @@
 FROM maven:3.8.4-openjdk-8 AS build
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /
 
 # Copy the POM file to download dependencies
 COPY pom.xml .
