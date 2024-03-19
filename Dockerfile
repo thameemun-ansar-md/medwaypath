@@ -16,11 +16,11 @@ FROM openjdk:8-jre-slim
 # Set the working directory in the container
 WORKDIR /app
 
+# Install MySQL
+RUN apt-get update && apt-get install -y mysql-server mysql-client
+
 # Copy the compiled app from the build stage
 COPY --from=build /app/medwaypath-specifications/target/*.jar app.jar
-
-# Install MySQL
-RUN apk add --no-cache mysql mysql-client
 
 # Copy MySQL configuration file
 COPY medwaypath-dal/src/main/resources/application-dev.properties application.properties
