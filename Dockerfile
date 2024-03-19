@@ -23,7 +23,7 @@ COPY --from=build /app/medwaypath-specifications/target/*.jar app.jar
 RUN apk add --no-cache mysql mysql-client
 
 # Copy MySQL configuration file
-COPY /app/medwaypath-dal/src/main/resources/application-dev.properties application.properties
+COPY medwaypath-dal/src/main/resources/application-dev.properties application.properties
 
 # Copy the MySQL initialization script
 COPY init.sql /docker-entrypoint-initdb.d/
