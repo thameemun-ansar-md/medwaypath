@@ -25,9 +25,6 @@ RUN apk add --no-cache mysql mysql-client
 # Copy MySQL configuration file
 COPY medwaypath-dal/src/main/resources/application-dev.properties application.properties
 
-# Copy the MySQL initialization script
-COPY init.sql /docker-entrypoint-initdb.d/
-
 # Expose the port your app runs on and sql
 EXPOSE 8080 3306
 
